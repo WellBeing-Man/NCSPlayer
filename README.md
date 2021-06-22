@@ -8,7 +8,7 @@
  
 ## 목적
  1. 장르, 태그 별 검색
- 2. Spring framework를 이용해 NCS.IO 크롤링 후 API 생성
+ 2. 백엔드 서버 구현
 
 
 ## TODO
