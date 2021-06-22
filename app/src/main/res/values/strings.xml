@@ -4,4 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="search">search</string>
     <string name="genres_moods">genres, moods</string>
+    <string name="title">Title</string>
+    <string name="genres_u0026_mood"><![CDATA[Genres & Mood]]></string>
 </resources>
