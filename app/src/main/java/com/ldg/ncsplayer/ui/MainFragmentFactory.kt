@@ -2,9 +2,10 @@ package com.ldg.ncsplayer.ui
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
-import com.ldg.ncsplayer.ui.list.ListFragment
+import com.ldg.ncsplayer.ui.list.MusicListFragment
 import com.ldg.ncsplayer.ui.player.PlayerFragment
 import javax.inject.Inject
+
 
 class MainFragmentFactory
 @Inject constructor(): FragmentFactory() {
@@ -14,8 +15,8 @@ class MainFragmentFactory
             PlayerFragment::class.java.name->{
                 PlayerFragment()
             }
-            ListFragment::class.java.name->{
-                ListFragment()
+            MusicListFragment::class.java.name->{
+                MusicListFragment()
             }
             else ->
                 super.instantiate(classLoader, className)

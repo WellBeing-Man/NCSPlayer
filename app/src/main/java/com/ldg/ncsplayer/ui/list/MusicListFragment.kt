@@ -7,6 +7,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class ListFragment : Fragment(R.layout.fragment_list) {
+class MusicListFragment : Fragment(R.layout.fragment_list) {
 
 }

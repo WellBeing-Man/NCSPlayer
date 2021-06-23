@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_player" />
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.ldg.ncsplayer.ui.list.ListFragment"
+        android:name="com.ldg.ncsplayer.ui.list.MusicListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
