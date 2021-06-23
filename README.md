@@ -12,6 +12,6 @@
 
 
 ## TODO
-1. 기능 구현
-  - 서버 완성전 mocky한 api로 미리 구현
-2. 백엔드 서버 구현
+1. ViewModel,Repo 구현 - Mocky Api를 이용
+2. Unit test code 작성하면서 
+3. 백엔드 서버 구현
