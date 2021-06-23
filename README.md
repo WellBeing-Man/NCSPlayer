@@ -12,6 +12,5 @@
 
 
 ## TODO
-1. ViewModel,Repo 구현 - Mocky Api를 이용
-2. Unit test code 작성하면서 
+1. ViewModel,Repo 구현 - Mocky Api를 이용 , unit test 
 3. 백엔드 서버 구현
