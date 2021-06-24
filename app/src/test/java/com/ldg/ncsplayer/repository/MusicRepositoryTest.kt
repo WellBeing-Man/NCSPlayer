@@ -1,4 +1,4 @@
-package com.ldg.ncsplayer.ui
+package com.ldg.ncsplayer.repository
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.google.common.truth.Truth.assertThat

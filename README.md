@@ -6,10 +6,14 @@
  - MVVM
  - DI(Hilt) Pattern
  
-## 목적
+## Target
  1. 장르, 태그 별 검색
  2. 백엔드 서버 구현
 
+## Dependency
+ 1. Music Service
+ img src="/Music Dependency.PNG"  width="700" height="370">
+ 
 
 ## TODO
 1. 유닛 테스트 환경 구축

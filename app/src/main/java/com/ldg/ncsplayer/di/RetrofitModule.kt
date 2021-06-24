@@ -10,6 +10,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import retrofit2.CallAdapter
+import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Qualifier
@@ -21,7 +23,7 @@ object RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideMoshiConverterFactory(moshi: Moshi): MoshiConverterFactory {
+    fun provideMoshiConverterFactory(moshi: Moshi): Converter.Factory {
         return MoshiConverterFactory.create(moshi)
     }
 
@@ -43,18 +45,17 @@ object RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideCoroutineCallConverterFactory():CoroutineCallAdapterFactory{
+    fun provideCoroutineCallConverterFactory():CallAdapter.Factory{
         return CoroutineCallAdapterFactory()
     }
 
     @Singleton
     @Provides
-    fun provideRetrofitBuilder(moshiConverterFactory: MoshiConverterFactory,coroutineCallAdapterFactory: CoroutineCallAdapterFactory): Retrofit.Builder {
+    fun provideRetrofitBuilder(moshiConverterFactory: Converter.Factory , coroutineCallAdapterFactory: CallAdapter.Factory): Retrofit.Builder {
         return Retrofit.Builder()
                 .baseUrl(MOCKY_URL)
                 .addConverterFactory(moshiConverterFactory)
                 .addCallAdapterFactory(coroutineCallAdapterFactory)
-
     }
 
 
