@@ -15,4 +15,17 @@ data class MusicEntity(
         val genre: String,
         val tags:String,
         val releaseDate:String
-        )
+        ){
+        override fun equals(other: Any?): Boolean {
+                if (this === other) return true
+                if (javaClass != other?.javaClass) return false
+
+                other as MusicEntity
+
+                if (id != other.id) return false
+
+                return true
+        }
+
+
+}

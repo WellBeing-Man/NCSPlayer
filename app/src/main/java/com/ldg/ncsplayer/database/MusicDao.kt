@@ -9,7 +9,7 @@ import androidx.room.Query
 
 @Dao
 interface MusicDao {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertShoppingItem(musicEntity: MusicEntity)
 
     @Query("Select * from musics")

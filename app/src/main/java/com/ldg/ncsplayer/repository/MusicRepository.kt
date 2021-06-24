@@ -5,10 +5,11 @@ import com.ldg.ncsplayer.database.MusicEntity
 
 interface MusicRepository {
 
-    suspend fun insertMusicEntityDB(musicEntity: MusicEntity)
 
-    suspend fun deleteMusicEntity(musicEntity: MusicEntity)
 
-    fun observeMusicEntity():LiveData<List<MusicEntity>>
+    suspend fun insertMusicEntitiesDB(musicEntity: List<MusicEntity>)
 
+    fun getMusicList():List<MusicEntity>
+
+    fun  requestMusicList():List<MusicEntity>
 }
