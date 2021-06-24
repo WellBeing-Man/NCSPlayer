@@ -12,8 +12,8 @@
 
 ## Dependency
  1. Music Service
- <img src="Music Dependency.PNG"  width="700" height="370">
- 
+![Music Service Dependency](./images/music_dependency.png)
+
 
 ## TODO
 1. 유닛 테스트 환경 구축
