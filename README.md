@@ -12,7 +12,7 @@
 
 ## Dependency
  1. Music Service
- <img src="/Music Dependency.PNG"  width="700" height="370">
+ <img src="Music Dependency.PNG"  width="700" height="370">
  
 
 ## TODO
