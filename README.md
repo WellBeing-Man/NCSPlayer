@@ -12,7 +12,7 @@
 
 ## Dependency
  1. Music Service
-![Music Service Dependency](/images/music_dependency.png)
+![Music Service Dependency](./images/music_dependency.png)
 
 
 ## TODO
