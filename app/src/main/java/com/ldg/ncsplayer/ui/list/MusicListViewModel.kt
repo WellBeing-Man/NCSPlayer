@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.ldg.ncsplayer.data.Genre
 import com.ldg.ncsplayer.database.MusicEntity
 import com.ldg.ncsplayer.repository.MusicRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -13,9 +14,14 @@ import javax.inject.Inject
 
 class MusicListViewModel (private val repository: MusicRepository): ViewModel() {
 
-    private val _musicEntities=MutableLiveData<List<MusicEntity>>()
-    val musicEntities:LiveData<List<MusicEntity>>
-          get() = _musicEntities
+    val musicEntities:LiveData<MutableList<MusicEntity>>
+          get() = repository.observableMusicEntities
+
+    val musicPageNumber:LiveData<Int>
+        get() = repository.observablePageNumber
+
+    private val currentGenre=MutableLiveData<Genre>().apply { postValue(Genre.BASS) }
+
 
     /**
      * 1. network 리퀘스트 후 local storage에 저장
@@ -26,9 +32,12 @@ class MusicListViewModel (private val repository: MusicRepository): ViewModel() 
         requestMusicToServer()
     }
 
+    /**
+     * primary list have 20 items
+     * */
     fun requestMusicToServer(){
-        _musicEntities.postValue(repository.requestMusicList())
-
+        currentGenre.value?:return
+        repository.getMusicList(currentGenre.value!!)
     }
 
 
@@ -37,10 +46,7 @@ class MusicListViewModel (private val repository: MusicRepository): ViewModel() 
 
     }
 
-    /**
-     *
-     *
-     * */
+
     fun refresh() {
         TODO("Not yet implemented")
     }
