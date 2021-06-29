@@ -36,4 +36,23 @@ class MusicListViewModel (private val repository: MusicRepository): ViewModel() 
 
 
     }
+
+    /**
+     *
+     *
+     * */
+    fun refresh() {
+        TODO("Not yet implemented")
+    }
+
+    /**
+     *
+     * */
+    fun requestNextMusic() {
+        TODO("Not yet implemented")
+    }
+
+    fun sortListByName() {
+        TODO("Not yet implemented")
+    }
 }
