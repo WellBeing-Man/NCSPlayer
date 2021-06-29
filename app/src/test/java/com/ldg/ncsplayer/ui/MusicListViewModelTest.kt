@@ -21,7 +21,7 @@ class MusicListViewModelTest {
     var mainCoroutineRule= MainCoroutineRule()
 
 
-    lateinit var viewModel:MusicListViewModel
+    private lateinit var viewModel:MusicListViewModel
 
     @Before
     fun setUp() {
